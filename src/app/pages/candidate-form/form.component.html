@@ -1,0 +1,132 @@
+<div class="container_form">
+  <h2>{{"form.title" | translate}}</h2>
+
+  <form class="form intern" #internForm="ngForm">
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{'form.firstName.title' | translate}}</mat-label>
+      <input matInput placeholder="{{'form.firstName.title' | translate}}" name="firstName" #firstName="ngModel"
+        required [(ngModel)]="intern.firstName" />
+      <mat-error *ngIf="firstName.hasError('required')">{{"form.firstName.required" | translate}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{'form.lastName.title' | translate}}</mat-label>
+      <input matInput placeholder="{{'form.lastName.title' | translate}}" name="lastName" #lastName="ngModel" required
+        [(ngModel)]="intern.lastName" />
+      <mat-error *ngIf="lastName.hasError('required')">{{"form.lastName.required" | translate}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{'form.email.title' | translate}}</mat-label>
+      <input matInput name="email" #email="ngModel" required [(ngModel)]="intern.email" placeholder="ex@ex.ex"
+        [pattern]="validEmail" />
+      <mat-error *ngIf="email.hasError('required')">{{"form.email.required" | translate}}</mat-error>
+      <mat-error *ngIf="email.hasError('pattern')">{{"form.email.incorrect" | translate}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{'form.skype.title' | translate}}</mat-label>
+      <input matInput name="skype" #skype="ngModel" required [(ngModel)]="intern.skype" placeholder="@Skype" />
+      <mat-error *ngIf="skype.hasError('required')">{{"form.skype.required" | translate}}</mat-error>
+    </mat-form-field>
+
+    <div class="wrapper_location">
+      <div class="wrapper_country">
+        <mat-form-field appearance="outline">
+          <mat-label>{{'form.country.title' | translate}}</mat-label>
+          <mat-select [(ngModel)]="intern.country" name="location" #location="ngModel" required (valueChange)="getCountryId($event)">
+            <mat-option *ngFor="let key of allCountries$ | async" [value]="key.id">{{key.countryName}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="location.hasError('required')">{{"form.country.required" | translate}}</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="wrapper_city">
+        <mat-form-field appearance="outline">
+          <mat-label>{{'form.city.title' | translate}}</mat-label>
+          <mat-select [disabled]=!intern.country [(ngModel)]="intern.city" name="city" #locationCity="ngModel"
+            required>
+            <mat-option *ngFor="let key of citiesByCountryId$ | async" [value]="key.cityName">{{key.cityName}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="locationCity.hasError('required')">{{"form.city.required" | translate}}</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{'form.phone.title' | translate}}</mat-label>
+      <input matInput type="tel" name="phone" #phone="ngModel" required [(ngModel)]="intern.phone"
+        placeholder="+123 45 678 91 23" pattern="[+]{1}[0-9]{12,14}" />
+      <mat-error *ngIf="phone.hasError('required')">{{"form.phone.required" | translate}}</mat-error>
+      <mat-error *ngIf="phone.hasError('pattern')">+123 45 678 91 23</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{'form.specialization.title' | translate}}</mat-label>
+
+      <!-- --------------------------if the backend gives data--------------------- -->
+
+      <!-- <mat-select [(ngModel)]="intern.specializationID" name="specialization" #specialization="ngModel" required>
+        <mat-option *ngFor='let key of allSpecializations$ | async' [value]="key.id">{{key.name}}</mat-option>
+      </mat-select> -->
+
+      <!-- --------------------------data from locale storage--------------------- -->
+
+      <mat-select [(ngModel)]="intern.specialization" name="specialization" #specialization="ngModel" required>
+        <mat-option *ngFor='let key of allSpecializations' [value]="key.name">{{key.name}}</mat-option>
+      </mat-select>
+
+      <mat-error *ngIf="specialization.hasError('required')">{{"form.specialization.required" | translate}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{'form.englishLevel.title' | translate}}</mat-label>
+      <mat-select [(ngModel)]="intern.englishLevel" name="englishLevel" #englishLevel="ngModel" required>
+        <mat-option *ngFor='let key of allEnglishLevels$ | async' [value]="key.levelName">{{key.levelName}}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="englishLevel.hasError('required')">{{"form.englishLevel.required" | translate}}</mat-error>
+    </mat-form-field>
+
+    <div class="wrapperCheckBox">
+
+      <mat-checkbox class="checkbox" name="checkbox" #checkbox2="ngModel" [(ngModel)]="intern.checkbox" color="primary"
+        (click)="toggleClassCheckBox($event)" required>
+        <span>
+          {{"form.checkbox.text" | translate}}
+          <a class="linkCheckBox">{{"form.checkbox.link" | translate}}</a>
+        </span>
+      </mat-checkbox>
+      <p [class]="errorCheckBox">{{"form.checkbox.required" | translate}}</p>
+
+      <div class="wrapperCv">
+        <input #csvInput hidden="true" type="file" onclick="this.value=null" (change)="csvInputChange($event)"
+          accept=".pdf, .doc, .jpg, .png" />
+
+        <button mat-raised-button class="buttonCv" data-title=".pdf, .doc, .jpg, .png" (click)="csvInput.click()"
+          (click)="stop($event)">
+          {{"form.cv" | translate}}
+        </button>
+
+      </div>
+    </div>
+
+
+    <div class="example-button-row">
+      <button mat-raised-button color="primary" (click)="clickSubmit(internForm)">{{"form.button" | translate}}</button>
+    </div>
+
+  </form>
+</div>
+
+<div [class]="isCloseTermsClass">
+  <div class="wrapper_content">
+    <h2>{{"form.terms.title" | translate}}</h2>
+    <p>{{"form.terms.text" | translate}}</p>
+    <div class="example-button-row">
+      <button mat-raised-button (click)="closeTerms()">{{"form.terms.button" | translate}}</button>
+    </div>
+
+  </div>
+</div>

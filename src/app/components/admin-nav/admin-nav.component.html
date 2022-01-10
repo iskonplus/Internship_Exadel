@@ -1,0 +1,7 @@
+<mat-form-field appearance="fill" *ngIf="displayComponent === 'admin'">
+	<mat-label>Pages</mat-label>
+	<mat-select matNativeControl [(value)]="selectedOption">
+		<mat-option value="Home" (click)="changeWindow()">Home</mat-option>
+		<mat-option value="Settings" (click)="changeWindow()">Settings</mat-option>
+	</mat-select>
+</mat-form-field>

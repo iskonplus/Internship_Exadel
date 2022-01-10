@@ -1,0 +1,66 @@
+:host {
+	border-left: solid 1px rgba(0, 0, 0, 0.1);
+}
+.wrapper {
+  width: 350px;
+  position: relative;
+
+  h3 {
+    margin-left: 5rem;
+    margin-bottom: 0rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #1e90cf;
+  }
+
+  hr {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 3rem;
+    height: .15rem;
+    border: none;
+    color: #1e90cf;
+    background-color: #1e90cf;
+    margin-left: 1rem;
+  }
+
+  span {
+    display: flex;
+    margin: 24px 0;
+    margin-left: 1rem;
+
+    input {
+      margin: 0 10px;
+      text-align: center;
+    }
+  }
+
+  ::ng-deep mat-form-field {
+    width: 300px !important;
+    margin-left: 1rem;
+  }
+
+
+  .input-text {
+    width: 20px;
+  }
+
+  .form {
+    min-width: 150px;
+    // max-width: 700px;
+    // width: 100%;
+  }
+
+
+  .btn {
+    width: 300px;
+    height: 49px;
+    color: #378B61;
+    background: rgba(55, 139, 97, 0.1);
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+
+}

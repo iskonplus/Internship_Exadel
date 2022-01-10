@@ -1,0 +1,13 @@
+<div>
+  <app-candidate-data [selectedCandidate]="selectedCandidate$ | async"></app-candidate-data>
+  <app-recruiter-assessment (changingForm)="onRecruiterFormChange($event)"
+    [selectedCandidate]="selectedCandidate$ | async" [assessmentsRecruiter]="assessmentsRecruiter"
+    [softSkills]="softSkills$ | async"></app-recruiter-assessment>
+  <app-tech-interviewer-assessment></app-tech-interviewer-assessment>
+  <div class="buttons">
+    <button class="decline-button" mat-stroked-button
+      (click)="onClick()">{{"recruiter.buttons.decline" | translate}}</button>
+    <button class="apply-button" mat-stroked-button
+      (click)="onClick()">{{"recruiter.buttons.apply" | translate}}</button>
+  </div>
+</div>

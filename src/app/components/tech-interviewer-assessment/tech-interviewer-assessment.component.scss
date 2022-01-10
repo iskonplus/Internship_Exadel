@@ -1,0 +1,63 @@
+:host {
+  position: relative;
+  margin-top: 2.3rem;
+}
+
+h3 {
+  margin-left: 4rem;
+  margin-bottom: 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #1e90cf;
+}
+
+hr {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 3rem;
+  height: .15rem;
+  border: none;
+  color: #1e90cf;
+  background-color: #1e90cf;
+}
+
+div {
+  display: flex;
+  max-height: 9rem;
+
+  form {
+    display: flex;
+  }
+
+  input {
+    width: 1rem;
+    border: none;
+    outline: none;
+    text-align: center;
+  }
+
+  textarea {
+    height: 5.1rem;
+  }
+
+  p {
+    width: 20rem;
+    margin-top: 1.2rem;
+    margin-left: 4rem;
+  }
+
+  .mat-list-item {
+    width: 17rem;
+  }
+}
+
+.mat-form-field {
+  width: 20rem;
+  margin-top: 1.2rem;
+  margin-left: 4rem;
+}
+
+.mat-list-item ::ng-deep .mat-list-item-content {
+  justify-content: space-between;
+}

@@ -1,0 +1,16 @@
+.mat-form-field {
+  
+  width: 7rem;
+
+  ::ng-deep .mat-form-field-wrapper {
+    padding: 0;
+  }
+
+  ::ng-deep .mat-form-field-flex {
+    background: transparent;
+  }
+
+  ::ng-deep .mat-form-field-underline {
+    display: none;
+  }
+}

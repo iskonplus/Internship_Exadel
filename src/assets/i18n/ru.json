@@ -1,0 +1,142 @@
+{
+  "translate": {
+    "label": "Язык",
+    "languages": [
+      {
+        "title": "Английский",
+        "value": "en"
+      },
+      {
+        "title": "Русский",
+        "value": "ru"
+      }
+    ]
+  },
+
+  "header": {
+    "log-out": "Выйти"
+  },
+
+  "login": {
+    "title": "Вход в личный кабинет",
+    "email": {
+      "title": "Электронная почта",
+      "required": "Необходимо указать электронную почту",
+      "incorrect": "Неправильная электронная почта"
+    },
+    "password": {
+      "title": "Введите пароль",
+      "required": "Необходимо ввести пароль"
+    },
+    "error": "Неверный адрес электронной почты или пароль",
+    "button": "Войти"
+  },
+
+  "form": {
+    "title": "Заполните форму",
+    "firstName": {
+      "title": "Имя",
+      "required": "Необходимо указать имя"
+    },
+    "lastName": {
+      "title": "Фамилия",
+      "required": "Необходимо указать фамилию"
+    },
+    "email": {
+      "title": "Электронная почта",
+      "required": "Необходимо указать электронную почту",
+      "incorrect": "Неправильная электронная почта"
+    },
+    "skype": {
+      "title": "Скайп",
+      "required": "Необходимо указать скайп"
+    },
+    "country": {
+      "title": "Страна",
+      "data": ["Беларусь", "Польша", "Россия", "Грузия", "Украина", "другое..."],
+      "required": "Необходимо указать страну"
+    },
+    "city": {
+      "title": "Город",
+      "data": ["Минск", "Варшава", "Москва", "Тбилиси", "Киев", "другое..."],
+      "required": "Необходимо указать город"
+    },
+    "phone": {
+      "title": "Телефон",
+      "required": "Необходиом указать телефон"
+    },
+    "specialization": {
+      "title": "Специализация",
+      "required": "Необходимо указать специализацию"
+    },
+    "englishLevel": {
+      "title": "Уровень английского языка",
+      "required": "Необходимо указать уровень английского языка"
+    },
+    "checkbox": {
+      "text": "принять условия обработки и хранения предоставленных данных",
+      "link": "ссылка на условия",
+      "required": "Необходимо принять условия"
+    },
+    "cv": "Добавить резюме",
+    "button": "Отправить",
+    "terms": {
+      "title": "Условия",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam provident eius dolor voluptates dolore ab,\n      incidunt sit tenetur voluptate officiis officia temporibus. Libero tenetur dolores deserunt nostrum, nam repellat\n      vitae!\n      Necessitatibus totam, id illum iure earum at adipisci beatae? Totam neque eos, doloremque dignissimos cum fugiat\n      soluta fugit rem atque dolore consectetur nisi. Nulla repellendus harum cupiditate maxime soluta quisquam.\n      Aperiam exercitationem ea dignissimos voluptatibus, quas quidem commodi necessitatibus optio excepturi tempore cum\n      neque rerum nisi perspiciatis provident fuga ducimus facilis corporis perferendis consequuntur saepe autem,\n      aliquid laudantium fugit. Officia.\n      Quam, quaerat. Error, neque! Sequi reprehenderit assumenda est dolore ducimus eum, inventore illum in a qui\n      excepturi pariatur suscipit doloribus dicta. Tempora ratione magnam odit cumque dolorum, debitis illo accusamus!\n      Similique atque magnam ullam obcaecati possimus in fuga fugit hic, recusandae ratione unde excepturi non enim,\n      tempore rem odio quaerat blanditiis ad velit amet a facere nisi sapiente quasi! Officiis.\n      Itaque harum vel repellat, distinctio ducimus hic id cum temporibus voluptas excepturi sed cumque et quos\n      voluptatum dolore commodi neque esse! Consequatur animi sed assumenda totam fugiat magni dignissimos autem!",
+      "button": "Закрыть"
+    }
+  },
+
+  "candidate-data": {
+    "title": "Данные кандидата",
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "email": "Почта",
+    "skype": "Скайп",
+    "location": "Локация",
+    "phone": "Телефон",
+    "specialization": "Специализация",
+    "englishLevel": "Английский"
+  },
+
+  "candidates-filter": {
+    "specialization": "Специализация",
+    "status": "Статус"
+  },
+
+  "recruiter": {
+    "assessment": {
+      "title": "Личностные навыки",
+      "english": "Английский язык",
+      "communicationSkills": "Навыки общения",
+      "abilityToListen": "Умение слушать",
+      "selfConfidence": "Уверенность в себе",
+      "comment": "Оставь свой комментарий"
+    },
+    "buttons": {
+      "decline": "ОТКАЗАТЬ",
+      "apply": "ПРИМЕНИТЬ ОЦЕНКИ И КОММЕНТАРИЙ"
+    }
+  },
+
+  "tech-interviewer": {
+    "assessment": {
+      "title": "Профессиональные навыки",
+      "comment": "Оставь свой комментарий"
+    },
+    "button": "ПРИМЕНИТЬ ОЦЕНКИ И КОММЕНТАРИЙ"
+  },
+
+  "mentor": {
+    "assessment": "Итоговый результат",
+    "grade": "Оценка",
+    "review": "Оставь свой отзыв",
+    "button": "ПРИМЕНИТЬ"
+  },
+
+
+  "footer": {
+    "label": "Powered by [Team3] Oct2021 Exadel Internship JS&.NET&BA"
+  }
+
+ }

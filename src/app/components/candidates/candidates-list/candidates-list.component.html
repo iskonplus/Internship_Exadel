@@ -1,0 +1,17 @@
+<div>
+  <app-candidate
+  *ngFor="let candidate of pageOfCandidates; let first = first"
+  [candidate]="candidate"
+  [selectedCandidate]="selectedCandidate$ | async"
+  [first]="first"
+  (click)="onClick(candidate)">
+  </app-candidate>
+</div>
+<mat-paginator
+  class="paginator"
+  [length]="candidates.length"
+  [pageSize]="7"
+  aria-label="Select page"
+  (page)="onPageChange($event)">
+</mat-paginator>
+

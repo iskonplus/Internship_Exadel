@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #cccccc00;
+  scroll-snap-align: start;
+}
+
+.example-section:hover::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 0px;
+  -webkit-box-shadow: 0 0 0 50px #ffffff inset;
+  -webkit-text-fill-color: #333;
+}
+
+.wrapper_settigs {
+  width: 1200px;
+  // background-color: #f9f9f9;
+  padding: 20px 40px;
+  margin: auto;
+}
+
+.block_settings {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.container_settings.form,
+.container_settings.users {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+}
+
+h3 {
+  color: #0080ca;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-left: 45px;
+  position: relative;
+}
+
+h3::before {
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: #0080ca;
+  top: 44%;
+  right: 103%;
+}
+
+.border_wrapper {
+  width: 100%;
+  height: 480px;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  padding: 20px 0px 20px 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper_settings_form {
+  width: 100%;
+  transition: 0.3s;
+  margin: auto;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.example-section {
+  overflow-y: scroll;
+  height: 220px;
+  padding-right: 20px;
+  margin-top: 6px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 4px;
+}
+
+li {
+  border: 1px solid #ccccccaf;
+  margin-bottom: 15px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  transition: 0.3s;
+  position: relative;
+}
+
+li:hover {
+  border: 1px solid #000000;
+  transition: 0.3s;
+}
+
+.button_delete {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  transform: translate(50%, -50%);
+  cursor: pointer;
+}
+
+.button_delete::before,
+.button_delete::after {
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #cccccc;
+  top: 45%;
+  right: 0.5%;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.button_delete::after {
+  transform: rotate(-45deg);
+}
+
+.button_delete:hover::before,
+.button_delete:hover::after {
+  background-color: #aa2626;
+}
+
+ul > li:last-child {
+  margin-bottom: 0px;
+}
+
+.mat-checkbox > span {
+  color: #0080ca;
+}
+
+.example-margin {
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+#button_delete_info:enabled {
+  background-color: #aa2626;
+  color: #ffffff;
+}
+
+.wrapper_add_form_data {
+  box-sizing: border-box;
+  padding: 0px 20px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  #addSpecialization {
+    width: 75%;
+  }
+
+  ::ng-deep .mat-form-field-wrapper {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  ::ng-deep .mat-form-field-infix {
+    border-top: 0px;
+    margin-top: 6px;
+    padding: 10px 0px;
+    line-height: 1;
+  }
+
+  button {
+    width: 20%;
+  }
+}
+
+.wrapper_Specialization_button_submit {
+  padding-right: 20px;
+  display: flex;
+}
+
+#button {
+  width: 150px;
+  margin: auto;
+}
+
+.border_wrapper.user {
+  padding: 20px;
+}
+
+.form_add_user {
+  display: flex;
+  flex-direction: column;
+}
+
+h4 {
+  font-weight: 600;
+}
+
+.form_add_user {
+  button {
+    width: 150px;
+    margin: 20px auto;
+  }
+  ::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 8px;
+  }
+  ::ng-deep .mat-form-field-infix {
+    border-top: 0px;
+    margin-top: 6px;
+    padding: 10px 0px;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .wrapper_settigs {
+    width: 100vw;
+    padding: 20px 10px;
+  }
+  .container_settings.form,
+  .container_settings.users {
+    width: 100%;
+  }
+
+  .container_settings.form {
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "translate": {
+    "label": "Language",
+    "languages": [
+      {
+        "title": "English",
+        "value": "en"
+      },
+      {
+        "title": "Russian",
+        "value": "ru"
+      }
+    ]
+  },
+
+  "header": {
+    "log-out": "Log out"
+  },
+
+  "login": {
+    "title": "Please sign in",
+    "email": {
+      "title": "Email",
+      "required": "Email must be specified",
+      "incorrect": "Incorrect email"
+    },
+    "password": {
+      "title": "Enter your password",
+      "required": "Password must be specified"
+    },
+    "error": "Email or the password incorrect",
+    "button": "Log in"
+  },
+
+  "form": {
+    "title": "Fill out the form",
+    "firstName": {
+      "title": "First name",
+      "required": "First name must be specified"
+    },
+    "lastName": {
+      "title": "Last name",
+      "required": "Last name must be specified"
+    },
+    "email": {
+      "title": "Email",
+      "required": "Email must be specified",
+      "incorrect": "Incorrect email"
+    },
+    "skype": {
+      "title": "Skype",
+      "required": "Skype must be specified"
+    },
+    "country": {
+      "title": "Country",
+      "data": ["Belarus", "Poland", "Russia", "Georgia", "Ukraine", "other..."],
+      "required": "Country must be specified"
+    },
+    "city": {
+      "title": "City",
+      "data": ["Minsk", "Warsaw", "Moscow", "Tbilisi", "Kiev", "other..."],
+      "required": "City must be specified"
+    },
+    "phone": {
+      "title": "Phone",
+      "required": "Phone must be specified"
+    },
+    "specialization": {
+      "title": "Specialization",
+      "required": "Specialization must be specified"
+    },
+    "englishLevel": {
+      "title": "English Level",
+      "required": "English level must be specified"
+    },
+    "checkbox": {
+      "text": "accept the terms of processing and storage of the provided data",
+      "link": "link to the terms",
+      "required": "Need to accept the terms"
+    },
+    "cv": "Add your CV",
+    "button": "Send",
+    "terms": {
+      "title": "Terms",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam provident eius dolor voluptates dolore ab,\n      incidunt sit tenetur voluptate officiis officia temporibus. Libero tenetur dolores deserunt nostrum, nam repellat\n      vitae!\n      Necessitatibus totam, id illum iure earum at adipisci beatae? Totam neque eos, doloremque dignissimos cum fugiat\n      soluta fugit rem atque dolore consectetur nisi. Nulla repellendus harum cupiditate maxime soluta quisquam.\n      Aperiam exercitationem ea dignissimos voluptatibus, quas quidem commodi necessitatibus optio excepturi tempore cum\n      neque rerum nisi perspiciatis provident fuga ducimus facilis corporis perferendis consequuntur saepe autem,\n      aliquid laudantium fugit. Officia.\n      Quam, quaerat. Error, neque! Sequi reprehenderit assumenda est dolore ducimus eum, inventore illum in a qui\n      excepturi pariatur suscipit doloribus dicta. Tempora ratione magnam odit cumque dolorum, debitis illo accusamus!\n      Similique atque magnam ullam obcaecati possimus in fuga fugit hic, recusandae ratione unde excepturi non enim,\n      tempore rem odio quaerat blanditiis ad velit amet a facere nisi sapiente quasi! Officiis.\n      Itaque harum vel repellat, distinctio ducimus hic id cum temporibus voluptas excepturi sed cumque et quos\n      voluptatum dolore commodi neque esse! Consequatur animi sed assumenda totam fugiat magni dignissimos autem!",
+      "button": "Close"
+    }
+  },
+
+  "candidate-data": {
+    "title": "FORM DATA",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "location": "Location",
+    "phone": "Phone",
+    "specialization": "Specialization",
+    "email": "Email",
+    "skype": "Skype",
+    "englishLevel": "English level"
+  },
+
+  "candidates-filter": {
+    "specialization": "Specialization",
+    "status": "Status"
+  },
+
+  "tech-interviewer-assessment": {
+    "title": "TECH SKILLS",
+    "comment": "Leave your comment here"
+  },
+
+  "recruiter": {
+    "assessment": {
+      "title": "SOFT SKILLS",
+      "english": "English",
+      "communicationSkills": "Communication skills",
+      "abilityToListen": "Ability to listen",
+      "selfConfidence": "Self-confidence",
+      "comment": "Leave your comment here"
+    },
+    "buttons": {
+      "decline": "ASSIGN DECLINE STATUS",
+      "apply": "APPLY ASSESSMENTS AND COMMENTS"
+    }
+  },
+
+  "tech-interviewer": {
+    "assessment": {
+      "title": "TECH SKILLS",
+      "comment": "Leave your comment here"
+    },
+    "button": "APPLY ASSESSMENTS AND COMMENTS"
+  },
+
+  "mentor": {
+    "assessment": "ASSESSMENT",
+    "grade": "GRADE",
+    "review": "Leave your review",
+    "button": "SUBMIT"
+  },
+
+   "footer": {
+     "label": "Powered by [Team3] Oct2021 Exadel Internship JS&.NET&BA"
+   }
+ }
+
+
+

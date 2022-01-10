@@ -1,0 +1,17 @@
+:host {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	max-width: fit-content;
+
+	.title, button {
+		margin: 1rem 0;
+	}
+
+	.subtitle {
+		text-align: center;
+	}
+}

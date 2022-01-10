@@ -1,0 +1,46 @@
+.candidate {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: .5rem 0 .5rem .5rem;
+  border: solid 3px transparent;
+  border-radius: .3rem 0 0 .3rem;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-size: 1.1rem;
+
+  .status {
+    margin-top: 1rem;
+    font-size: .8rem;
+
+    span {
+      margin-right: .3rem;
+    }
+  }
+}
+
+.active {
+  border: solid 3px #1e90cf;
+  color: #1e90cf;
+  border-radius: .3rem;
+}
+
+.margin-top {
+  margin-top: .5rem;
+}
+
+.color-red {
+  color: #ff0000
+}
+
+.color-green {
+  color: #329b00;
+}
+
+.color-blue {
+  color: #1e90cf
+}
+
+.color-grey {
+  color: #c4c4c4;
+}

@@ -1,0 +1,47 @@
+<h3>{{"tech-interviewer.assessment.title" | translate}}:</h3>
+<hr>
+<div *ngIf="(activeUser !=='recruiter' && activeUser !== 'mentor') else recruiterBlock">
+  <form (change)="onChange()">
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        HTML:
+        <span>
+          <input name="input" [(ngModel)]="assessmentsTech['html']" type="text" (keypress)="handler($event, 'html' )">/4
+        </span>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        CSS:
+        <span>
+          <input name="input" [(ngModel)]="assessmentsTech['css']" type="text" (keypress)="handler($event, 'css' )">/4
+        </span>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        JavaScript:
+        <span>
+          <input name="input" [(ngModel)]="assessmentsTech['javaScript']" type="text"
+            (keypress)="handler($event, 'javaScript' )">/4
+        </span>
+      </mat-list-item>
+    </mat-list>
+    <mat-form-field appearance="outline">
+      <mat-label>{{"tech-interviewer.assessment.comment" | translate}}</mat-label>
+      <textarea name="text" [(ngModel)]="assessmentsTech['comment']" matInput></textarea>
+    </mat-form-field>
+  </form>
+</div>
+<ng-template #recruiterBlock>
+  <div>
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        HTML: <span>4/4</span>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        CSS: <span>4/4</span>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        JavaScript: <span>3/4</span>
+      </mat-list-item>
+    </mat-list>
+    <p>Tech-interviewer comment</p>
+  </div>
+</ng-template>

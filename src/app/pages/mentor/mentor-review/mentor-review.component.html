@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <h3>{{"mentor.assessment" | translate}}</h3>
+  <hr>
+  <form class="form" (ngSubmit)="onSubmit()">
+
+    <span>{{"mentor.grade" | translate}}: <input name="input" [(ngModel)]="scores.grade" class="input-text" type="text"
+        (keypress)="OnlyNumbersAllowed($event)">
+      /10</span>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{"mentor.review" | translate}}</mat-label>
+      <textarea cols="200" rows="25" name="text" matInput [(ngModel)]="scores.review"></textarea>
+    </mat-form-field>
+    <button type="submit" class="btn">{{"mentor.button" | translate}}</button>
+  </form>
+</div>

@@ -1,0 +1,114 @@
+<div class="wrapper_settigs">
+  <div class="block_settings">
+
+
+    <div class="container_settings form">
+      <h3>Specialization DATA:</h3>
+      <div class="border_wrapper">
+        <div class="wrapper_settings_form specialization">
+
+          <mat-checkbox class="example-margin" [checked]="allComplete" color="primary" [indeterminate]="someComplete()"
+            (change)="setAll($event.checked)">
+            {{dataSpecialization.skill}}
+          </mat-checkbox>
+
+
+          <section class="example-section">
+            <span class="example-list-section">
+              <ul (click)="deleteSpecialization($event)">
+                <li *ngFor="let subtask of dataSpecialization.subtasks" #li>
+                  <mat-checkbox color="primary" [(ngModel)]="subtask.isActive" (ngModelChange)="updateAllComplete()">
+                    {{subtask.name}}
+                  </mat-checkbox>
+                  <div class="button_delete"></div>
+                </li>
+              </ul>
+            </span>
+          </section>
+
+        </div>
+        <h4>ADD</h4>
+
+        <div class="wrapper_add_form_data">
+
+          <mat-form-field appearance="outline" id="addSpecialization">
+            <mat-label>Add specialization</mat-label>
+            <input matInput type="text" name="specialization" #inputValue="ngModel"
+              [(ngModel)]="isInputValueAddSpecializationData">
+          </mat-form-field>
+
+
+          <button mat-raised-button disabled="{{!inputValue.value}}" (click)="addSpecialization()"
+            #buttonAdd>ADD</button>
+
+        </div>
+
+
+        <div class="wrapper_Specialization_button_submit">
+          <button mat-raised-button disabled={{isDisabled}} (click)='saveChangesSpecializationData()'
+            id="button">SUBMIT</button>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container_settings users">
+
+      <h3>ADD/DELETE USER:</h3>
+
+      <div class="border_wrapper user">
+
+        <form #newUserForm="ngForm" class="form_add_user">
+          <h4>ADD</h4>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput [(ngModel)]="newUserForm.value.email" #email="ngModel" type="text" name="email" required
+              [pattern]="validEmail" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput [(ngModel)]="newUserForm.value.password" #password="ngModel" type="text" name="password"
+            [pattern]="validPassword"
+            required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Role</mat-label>
+            <mat-select [(ngModel)]="newUserForm.value.role" name="role" #role="ngModel" required>
+              <mat-option *ngFor='let key of isRole' [value]="key">{{key}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <button mat-raised-button disabled="{{!newUserForm.valid}}"
+            (click)="newUserSubmit(newUserForm)">SUBMIT</button>
+
+        </form>
+
+        <form #deleteUserForm="ngForm" class="form_add_user">
+          <h4>DELETE</h4>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput [(ngModel)]="deleteUserForm.value.emailDeleteUser" #emailDeleteUser="ngModel" type="email"
+              name="email" required [pattern]="validEmail" />
+          </mat-form-field>
+
+          <button mat-raised-button disabled="{{!deleteUserForm.valid}}" id="button_delete_info"
+            (click)="deleteUserSubmit(deleteUserForm)">DELETE</button>
+
+        </form>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+</div>

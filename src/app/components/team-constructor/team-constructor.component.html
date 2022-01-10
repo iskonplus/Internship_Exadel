@@ -1,0 +1,30 @@
+<mat-form-field appearance="fill">
+	<mat-label id="mentor-list">Select mentor...</mat-label>
+	<mat-select multiple [(value)]="selectedMentors">
+
+		<mat-option *ngFor="let mentor of mentors" [value]="mentor">
+			{{mentor.email}}
+		</mat-option>
+	</mat-select>
+</mat-form-field>
+
+<mat-label>Candidates in team: {{selectedCandidates.length}} / 5</mat-label>
+
+<mat-selection-list class="candidates" #candidates [multiple]="false">
+	<div *ngFor="let candidate of selectedCandidates" style="display: flex;">
+		<mat-list-option id="candidate" [value]="candidate">
+			{{candidate.firstName + " " + candidate.lastName}}
+		</mat-list-option>
+		<button id="closeBtn" mat-icon-button color="warn" aria-label="close button for candidate in team-constructor"
+			(click)="removeCandidate(candidate)">
+			<mat-icon>close</mat-icon>
+		</button>
+	</div>
+
+</mat-selection-list>
+
+<!-- <p>
+		Option selected: {{candidates.selectedOptions.selected[0]?.value.firstName}}
+	</p> -->
+
+<button class="submit" mat-stroked-button (click)="sendNotify()">SUBMIT & NOTIFY</button>

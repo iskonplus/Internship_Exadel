@@ -1,0 +1,31 @@
+<h3>{{"recruiter.assessment.title" | translate}}:</h3>
+<hr>
+<div *ngIf="(activeUser !=='techInterviewer' && activeUser !== 'mentor') else techBlock">
+  <form (change)="onChange()">
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let skill of softSkills">
+        {{skill.description}}:
+        <span>
+          <input [name]="'input'+skill.id" [(ngModel)]="assessmentsRecruiter[skill.id]" type="text"
+            (keypress)="handler($event, skill.id)">/4
+        </span>
+      </mat-list-item>
+    </mat-list>
+    <mat-form-field appearance="outline">
+      <mat-label>{{"recruiter.assessment.comment" | translate}}</mat-label>
+      <textarea name="text" [(ngModel)]="assessmentsRecruiter['comment']" matInput></textarea>
+    </mat-form-field>
+  </form>
+</div>
+<ng-template #techBlock>
+  <div>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let skill of softSkills">
+        {{skill.description}}: <span>
+          <span *ngIf="(selectedCandidate$ | async).assessmentsRecruiter">{{(selectedCandidate$ | async).assessmentsRecruiter[skill.id]}}</span>/4
+        </span>
+      </mat-list-item>
+    </mat-list>
+    <p *ngIf="(selectedCandidate$ | async).assessmentsRecruiter">{{(selectedCandidate$ | async).assessmentsRecruiter.comment}}</p>
+  </div>
+</ng-template>

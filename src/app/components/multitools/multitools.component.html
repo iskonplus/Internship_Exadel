@@ -1,0 +1,9 @@
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+	<mat-button-toggle #datepicker checked="true">Datepicker</mat-button-toggle>
+	<mat-button-toggle #teamConstructor>Team-constructor</mat-button-toggle>
+	<!-- <mat-button-toggle #archive>Archive</mat-button-toggle> -->
+</mat-button-toggle-group>
+
+<app-calendar *ngIf="datepicker.checked"></app-calendar>
+<app-team-constructor #constructor *ngIf="teamConstructor.checked"></app-team-constructor>
+<!-- <app-archive *ngIf="archive.checked"></app-archive> -->

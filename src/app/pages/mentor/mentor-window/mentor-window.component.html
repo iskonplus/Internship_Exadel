@@ -1,0 +1,10 @@
+<div>
+  <div class="wrapper">
+    <div class="review">
+      <app-candidate-data [selectedCandidate]="selectedCandidate$ | async"></app-candidate-data>
+      <app-recruiter-assessment [softSkills]="softSkills$ | async"></app-recruiter-assessment> <br>
+      <app-tech-interviewer-assessment></app-tech-interviewer-assessment>
+    </div>
+    <app-mentor-review class="mentor-review"></app-mentor-review>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  hr {
+    margin-top: .5rem;
+    border: none;
+    background-color: #1e90cf;
+    color: #1e90cf;
+    height: .05rem;
+  }
+
+  button {
+    margin-top: 2rem;
+    padding: .5rem 0;
+    width: 100%;
+    border: none;
+    border-radius: 2rem;
+    background: rgba(55, 139, 97, 0.1);
+    color: #378b61;
+  }
+}

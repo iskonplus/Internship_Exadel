@@ -1,0 +1,75 @@
+.header__user
+{
+	display: flex;
+	align-items: center;
+	position: relative;
+
+	&:hover
+	{
+		cursor: pointer;
+	}
+
+	.name
+	{
+		margin-right: 2rem;
+		color: #1E90CF;
+		font-weight: bold;
+    	position: relative;
+	}
+
+  .name::after
+	{
+		content: '';
+		position: absolute;
+		margin-left: .5rem;
+		top: 40%;
+		border: 5px solid transparent;
+		border-top: 5px solid #1E90CF;
+	}
+
+
+	.avatar img
+	{
+    width: 2rem;
+		height: 2rem;
+		border-radius: 50%;
+	}
+}
+
+.user__features
+{
+	position: absolute;
+
+	& div
+	{
+    font-size: 13px;
+		transition: linear .2s color;
+
+		&:visited
+		{
+			color: #1E90CF;
+		}
+
+		&:hover
+		{
+			color: #76c7f3;
+		}
+	}
+
+	&:hover
+	{
+		cursor: pointer;
+	}
+}
+
+
+@media (max-width: 350px) {
+  .header__user
+  {
+    .avatar img
+    {
+      display: none;
+    }
+  }
+}
+

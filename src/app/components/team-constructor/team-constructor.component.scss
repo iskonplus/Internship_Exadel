@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  background-color: #fff;
+
+  .candidates {
+	  display: inherit;
+	  flex-direction: column;
+	  flex: 1 1 auto;
+  }
+
+//   #candidate ::ng-deep mat-list-text {
+//     display: flex;
+//     flex-direction: row;
+//   }
+
+//   mat-form-field ::ng-deep .mat-form-field-flex {
+//     width: 450px;
+//   }
+}

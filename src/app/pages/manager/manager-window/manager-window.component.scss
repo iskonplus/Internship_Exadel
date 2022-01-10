@@ -1,0 +1,11 @@
+:host {
+  position: relative;
+  display: flex;
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+
+  .buttons div {
+	display: flex;
+	justify-content: space-between;
+}
+}

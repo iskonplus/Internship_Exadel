@@ -1,0 +1,40 @@
+<div class="wrapper_user_login">
+  <h2>{{"login.title" | translate}}</h2>
+
+  <div class="wrapper_form">
+
+    <form #userForm="ngForm">
+      <mat-form-field appearance="outline">
+        <mat-label>{{"login.email.title" | translate}}</mat-label>
+        <input matInput name="email" #emailId="ngModel" [(ngModel)]="userData.email" required placeholder="ex@ex.ex"
+          [pattern]="validEmail" />
+        <mat-error *ngIf="emailId.hasError('required')">{{"login.email.required" | translate}}</mat-error>
+        <mat-error *ngIf="emailId.hasError('pattern')">{{"login.email.incorrect" | translate}}</mat-error>
+      </mat-form-field>
+
+      <div class="example-container">
+
+        <mat-form-field appearance="outline">
+          <mat-label>{{"login.password.title" | translate}}</mat-label>
+          <input matInput (keyup)="onFocus(userForm)" name="input" [type]="hide ? 'password' : 'text'"
+            #passwordId="ngModel" [(ngModel)]="userData.password" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <p [class]="errorLogIn" *ngIf="passwordId.hasError('required') || passwordId.touched">{{"login.password.required" | translate}}
+        </p>
+        <p [class]="errorLogInTwo">{{"login.error" | translate}}</p>
+
+      </div>
+
+      <div class="example-button-row">
+        <button mat-raised-button color="primary" (click)="submit(userForm)">{{"login.button" | translate}}</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

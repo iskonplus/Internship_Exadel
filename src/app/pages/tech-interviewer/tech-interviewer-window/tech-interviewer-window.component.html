@@ -1,0 +1,7 @@
+<div class="review">
+	<app-candidate-data [selectedCandidate]="selectedCandidate$ | async"></app-candidate-data>
+	<app-recruiter-assessment [softSkills]="softSkills$ | async"></app-recruiter-assessment>
+	<app-tech-interviewer-assessment (changingForm)="onFormChange($event)" [assessmentsTech]="assessmentsTech">
+	</app-tech-interviewer-assessment>
+	<button mat-stroked-button (click)="onClick()">{{"tech-interviewer.button" | translate}}</button>
+</div>
